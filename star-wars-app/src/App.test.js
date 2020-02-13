@@ -28,7 +28,6 @@ test("Render the Logo", async () => {
 
 test("Render the next button", async () => {
     const wrapper = rtl.render(<App />);
-    wrapper.getByText(/next/i);
     const nextElem = wrapper.getByText(/next/i);
     rtl.act(() => {
         rtl.fireEvent.click(nextElem)
@@ -38,7 +37,6 @@ test("Render the next button", async () => {
 
 test("Render the previous button", async () => {
     const wrapper = rtl.render(<App />);
-    wrapper.getByText(/previous/i);
     const prevElem = wrapper.getByText(/previous/i);
     rtl.act(() => {
         rtl.fireEvent.click(prevElem)
