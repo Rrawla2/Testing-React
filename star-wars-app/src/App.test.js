@@ -23,7 +23,7 @@ jest.mock("axios", () => {
 test("Render the Logo", async () => {
     const wrapper = rtl.render(<App />);
     await wrapper.findAllByAltText(/logo/i);
-    expect(wrapper.findByAltText(/logo/i)).not.toBeNull();
+    expect(wrapper.queryByAltText(/logo/i)).not.toBeNull();
 })
 
 test("Render the next button", async () => {
